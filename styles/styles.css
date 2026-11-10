@@ -134,6 +134,7 @@ nav .signup {
 nav .signup a {
     font-weight: 700;
     margin: 0 0 0 24px;
+
 }
 
 .navbar a:hover {
@@ -165,7 +166,7 @@ nav .signup .button:hover {
 header .container {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: center;
     width: 100%;
     padding: 50px 0;
     gap: 24px;
@@ -176,7 +177,7 @@ header .container div {
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
-    width: 50%;
+    width: 45%;
 }
 
 header .container div .button {
@@ -203,7 +204,7 @@ header .container .button:hover {
 }
 
 header picture {
-    width: 50%;
+    width: 45%;
 }
 
 header picture img {
@@ -220,7 +221,6 @@ Going smoothly so far */
 main .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 100%;
 }
 
@@ -263,8 +263,9 @@ main .container .wide-card > div > div {
 main .container .services {
     display: flex;
     flex-direction: row;
+    padding: 0 6px;
     width: 100%;
-    gap: 48px;
+    gap: 12px;
     margin: 50px 0;
 }
 
@@ -391,8 +392,9 @@ main .container .testimonials {
 main .container .testimonials > div {
     display: flex;
     flex-direction: row;
-    gap: 48px;
+    gap: 24px;
     margin: 24px 0 0 0;
+    padding: 0 6px;
 }
 
 main .container .testimonials > div .reviewcard {
@@ -419,7 +421,6 @@ main .container .testimonials > div .reviewcard > div > .review-user {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    margin: 0 48px 0 0;
 }
 
 main .container .testimonials > div .reviewcard > div > .review-user > .name {
@@ -447,7 +448,7 @@ footer .container {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-footer .container > ul {
+footer .container ul {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -474,5 +475,83 @@ footer a:hover {
 
 /* Media Query Time (this hurts my head the most) */
 
-@media (max-width:1024px) {
+@media screen and (max-width:1024px) {
+    nav .logo p {
+        /* I will remember this technique forever. this saved my navbar width a ton */
+        display: none;
+    }
+    nav .navbar li {
+        padding: 0 12px;
+    }
+    nav .signup .button {
+        padding: 12px;
+    }
+    header .container {
+        padding: 0 12px;
+        gap: 12px;
+    }
+    main .container .pricing > div {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    main .container .pricing > div > :nth-child(3) {
+        grid-column: span 2;
+    }
+}
+
+@media screen and (max-width:768px) {
+    nav .container {
+        flex-direction: column;
+        gap: 24px;
+    }
+    nav .container .logo a {
+        padding: 0;
+    }
+    nav .container .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav .navbar li {
+        padding: 12px 0;
+    }
+    nav .signup {
+        flex-direction: column;
+        gap: 24px;
+    }
+    nav .signup a {
+        margin: 0;
+    }
+    header .container {
+        padding: 0;
+        gap: 48px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    header .container div {
+        width: 100%;
+        align-items: center;
+    }
+    header .container div .button {
+        margin: 0;
+    }
+    header picture {
+        width: 95%;
+    }
+    main .container .wide-card {
+        padding: 48px;
+    }
+    main .container .services {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 0;
+    }
+    main .container .services picture {
+        width: 100%;
+    }
+    main .container .services div ul {
+        align-items: center;
+        margin: 48px 0;
+    }
 }

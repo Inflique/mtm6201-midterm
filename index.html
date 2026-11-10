@@ -13,7 +13,7 @@
     <title>Inflique Media</title>
 </head>
 <body>
-    <nav>
+    <nav aria-label="Main Navigation">
         <!-- The first of 5000 div's -->
         <div class="container">
             <div class="logo">
@@ -55,23 +55,23 @@
 
     <main>
         <div class="container">
-            <div class="wide-card">
+            <div class="wide-card" aria-label="Company Statistics">
                 <div>
-                    <img src="./images/UserCircle.svg" alt="Business Icon">
+                    <img src="./images/UserCircle.svg" alt="" aria-hidden="true">
                     <div>
                         <p class="stat">20+</p>
                         <p>Businesses</p>
                     </div>
                 </div>
                 <div>
-                    <img src="./images/ProjectorScreenChart.svg" alt="Projects Icon">
+                    <img src="./images/ProjectorScreenChart.svg" alt="" aria-hidden="true">
                     <div>
                         <p class="stat">50+</p>
                         <p>Projects</p>
                     </div>
                 </div>
                 <div>
-                    <img src="./images/Globe.svg" alt="Countries Icon">
+                    <img src="./images/Globe.svg" alt="" aria-hidden="true">
                     <div>
                         <p class="stat">30+</p>
                         <p>Countries</p>
@@ -80,16 +80,18 @@
             </div>
             <div class="services" id="services">
                 <picture>
+                    <source srcset="images/services-768x768.png" media="(max-width:768px)">
+                    <source srcset="images/services-1024x1024.png" media="(max-width:1024px)">
                     <img src="./images/services.png" alt="Inflique Media's Services">
                 </picture>
                 <div>
                     <h2>All Your Media Needs In One Place</h2>
                     <p>A few services provided to develop your brand & marketing:</p>
                     <ul>
-                        <li><img src="./images/CheckCircle.svg" alt="Check Icon"><p>Digital Graphics</p></li>
-                        <li><img src="./images/CheckCircle.svg" alt="Check Icon"><p>Photography</p></li>
-                        <li><img src="./images/CheckCircle.svg" alt="Check Icon"><p>Brand Development</p></li>
-                        <li><img src="./images/CheckCircle.svg" alt="Check Icon"><p>Website Development</p></li>
+                        <li><img src="./images/CheckCircle.svg" alt="" aria-hidden="true"><p>Digital Graphics</p></li>
+                        <li><img src="./images/CheckCircle.svg" alt="" aria-hidden="true"><p>Photography</p></li>
+                        <li><img src="./images/CheckCircle.svg" alt="" aria-hidden="true"><p>Brand Development</p></li>
+                        <li><img src="./images/CheckCircle.svg" alt="" aria-hidden="true"><p>Website Development</p></li>
                     </ul>
                 </div>
             </div>
@@ -98,32 +100,32 @@
                 <p>See which package offers the most value to you.</p>
                 <div>
                     <div class="card">
-                        <img src="./images/Package.svg" alt="Package Icon">
+                        <img src="./images/Package.svg" alt="" aria-hidden="true">
                         <h3>Basic</h3>
                         <ul>
-                            <li><img src="./images/CheckCircle.svg" alt="Check Icon"><p>Web Design & Development</p></li>
-                            <li><img src="./images/CheckCircle.svg" alt="Check Icon"><p>Graphic Design & Branding</p></li>
-                            <li><img src="./images/CheckCircle.svg" alt="Check Icon"><p>Photography</p></li>
-                            <li><img src="./images/CheckCircle.svg" alt="Check Icon"><p>Project Management</p></li>
+                            <li><img src="./images/CheckCircle.svg" alt="" aria-hidden="true"><p>Web Design & Development</p></li>
+                            <li><img src="./images/CheckCircle.svg" alt="" aria-hidden="true"><p>Graphic Design & Branding</p></li>
+                            <li><img src="./images/CheckCircle.svg" alt="" aria-hidden="true"><p>Photography</p></li>
+                            <li><img src="./images/CheckCircle.svg" alt="" aria-hidden="true"><p>Project Management</p></li>
                         </ul>
-                        <h3 class="price">$50</h3>
+                        <h3 class="price" aria-label="Price: $50">$50</h3>
                         <a href="#" class="button">Select</a>
                     </div>
                     <div class="card">
-                        <img src="./images/Package.svg" alt="Package Icon">
+                        <img src="./images/Package.svg" alt="" aria-hidden="true">
                         <h3>Pro</h3>
                         <ul>
-                            <li><img src="./images/CheckCircle.svg" alt="Check Icon"><p>UX Design & CMS Website</p></li>
-                            <li><img src="./images/CheckCircle.svg" alt="Check Icon"><p>On-Location Photography</p></li>
-                            <li><img src="./images/CheckCircle.svg" alt="Check Icon"><p>Videography</p></li>
-                            <li><img src="./images/CheckCircle.svg" alt="Check Icon"><p>Digital Graphics Suite</p></li>
-                            <li><img src="./images/CheckCircle.svg" alt="Check Icon"><p>Managed Workflow</p></li>
+                            <li><img src="./images/CheckCircle.svg" alt="" aria-hidden="true"><p>UX Design & CMS Website</p></li>
+                            <li><img src="./images/CheckCircle.svg" alt="" aria-hidden="true"><p>On-Location Photography</p></li>
+                            <li><img src="./images/CheckCircle.svg" alt="" aria-hidden="true"><p>Videography</p></li>
+                            <li><img src="./images/CheckCircle.svg" alt="" aria-hidden="true"><p>Digital Graphics Suite</p></li>
+                            <li><img src="./images/CheckCircle.svg" alt="" aria-hidden="true"><p>Managed Workflow</p></li>
                         </ul>
-                        <h3 class="price">$70</h3>
+                        <h3 class="price" aria-label="Price: $70">$70</h3>
                         <a href="#" class="button">Select</a>
                     </div>
                     <div class="card">
-                        <img src="./images/Package.svg" alt="Package Icon">
+                        <img src="./images/Package.svg" alt="" aria-hidden="true">
                         <h3>Premium</h3>
                         <ul>
                             <li><img src="./images/CheckCircle.svg" alt="Check Icon"><p>Full-Scale Web Experience</p></li>
@@ -133,7 +135,7 @@
                             <li><img src="./images/CheckCircle.svg" alt="Check Icon"><p>Brand System</p></li>
                             <li><img src="./images/CheckCircle.svg" alt="Check Icon"><p>Project & Marketing Support</p></li>
                         </ul>
-                        <h3 class="price">$100</h3>
+                        <h3 class="price" aria-label="Price: $100">$100</h3>
                         <a href="#" class="button">Select</a>
                     </div>
                 </div>
@@ -142,6 +144,8 @@
                 <h2>A Large Variety of Styles</h2>
                 <p>Take your brand in any direction you see fit.</p>
                 <picture>
+                    <source srcset="images/variety-768.png" media="(max-width:768px)">
+                    <source srcset="images/variety-1024.png" media="(max-width:1024px)">
                     <img src="./images/variety.png" alt="More media by Inflique">
                 </picture>
             </div>
@@ -160,7 +164,7 @@
                             </div>
                             <div class="rating">
                                 <p>4.5</p>
-                                <img src="./images/Star.svg" alt="review star">
+                                <img src="./images/Star.svg" alt="review star" aria-hidden="true">
                             </div>
                         </div>
                         <p>“Wow... I am very happy with Inflique's services, it turned out to be more than my expectations and so far there have been no problems. Would easily recommend”.</p>
@@ -173,7 +177,7 @@
                             </div>
                             <div class="rating">
                                 <p>4.5</p>
-                                <img src="./images/Star.svg" alt="review star">
+                                <img src="./images/Star.svg" alt="review star" aria-hidden="true">
                             </div>
                         </div>
                         <p>“I like it because I like to make many changes and they were still met.”</p>
@@ -186,7 +190,7 @@
                             </div>
                             <div class="rating">
                                 <p>4.5</p>
-                                <img src="./images/Star.svg" alt="review star">
+                                <img src="./images/Star.svg" alt="review star" aria-hidden="true">
                             </div>
                         </div>
                         <p>“This is a very unusual success for my business that currently requires a specific brand guidelines.”</p>
@@ -196,7 +200,7 @@
         </div>
     </main>
 
-    <footer>
+    <footer role="contentinfo">
         <div class="container">
             <div class="logo">
                 <a href="#">
@@ -204,19 +208,21 @@
                     <p>Inflique</p>
                 </a>
             </div>
-            <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-            <div class="address">
+            <nav aria-label="Footer Navigation">
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </nav>
+            <address class="address">
                 <p>1385 Woodroffe Ave</p>
                 <p>Ottawa, ON</p>
                 <p>K2G 1V8</p>
                 <p class="copy">&copy; Inflique, 2026</p>
-            </div>
+            </address>
         </div>
     </footer>
     
