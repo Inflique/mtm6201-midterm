@@ -55,7 +55,7 @@ Starting with this because doing it during the layout assembly is a headache*/
 html {
     background-color: #000;
     font-family: 'Manrope', sans-serif;
-    font-size: 12;
+    font-size: 16px;
     color: #fff;
 }
 
@@ -64,15 +64,15 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 a {
@@ -80,6 +80,203 @@ a {
     text-decoration: none;
 }
 
+.container {
+    max-width: 1440px;
+}
+
 /* Navbar styles
 Here we go... */
 
+nav .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* width 100% is the biggest clutch i ever seen */
+    width: 100%;
+    padding: 24px 0 50px 0;
+    /*padding for top and bottom makes for neat n adjustable spacing between page elements*/
+    align-items: center;
+    margin: 0 auto;
+}
+
+nav .logo a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 700;
+    gap: 16px;
+    padding: 0 0 0 16px;
+}
+
+nav .logo img {
+    width: 3rem;
+}
+
+nav .navbar ul {
+    display: flex;
+    flex-direction: row;
+}
+
+nav .navbar li {
+    padding: 0 24px;
+}
+
+nav .signup {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav .signup a {
+    font-weight: 700;
+    margin: 0 0 0 24px;
+}
+
+nav .signup .button {
+    padding: 12px 48px;
+    border: 1px solid #fff;
+}
+
+/* Header Styles */
+
+header .container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+header .container div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    width: 50%;
+}
+
+header .container div .button {
+    font-weight: 700;
+    background-color: #f00;
+    color: #000;
+    padding: 16px 64px;
+    margin: 24px 0;
+}
+
+header picture {
+    width: 50%;
+}
+
+header picture img {
+    width: 100%;
+}
+
+/* Main Styles
+Going smoothly so far */
+
+main .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+}
+
+main .container .wide-card {
+    background-color: #111;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 48px 96px;
+    margin: 50px 0;
+}
+
+main .container .wide-card .stat {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+main .container .wide-card > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+}
+
+/*This section took FOREVER to fix but luckily using rems instead of % height
+and using the > selector worked*/
+
+main .container .wide-card > div img {
+    height: 3.5rem;
+    width: auto;
+}
+
+main .container .wide-card > div > div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 0;
+}
+
+main .container .services {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 48px;
+    margin: 50px 0;
+}
+
+main .container .services picture {
+    width: 50%;
+}
+
+main .container .services picture img {
+    width: 100%;
+}
+
+main .container .services div {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+main .container .services div ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 24px 0;
+}
+
+main .container .services div ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+main .container .pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin: 50px 0;
+}
+
+main .container .pricing > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 66.67%;
+    gap: 48px;
+}
+
+main .container .pricing .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 96px;
+    border: 1px solid #fff;
+    gap: 24px;
+}
+
+main .container .pricing .card .price {
+    margin-top: auto;
+}
