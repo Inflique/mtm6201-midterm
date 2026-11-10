@@ -165,6 +165,7 @@ nav .signup .button:hover {
 header .container {
     display: flex;
     flex-direction: row;
+    align-items: center;
     width: 100%;
     padding: 50px 0;
     gap: 24px;
@@ -209,12 +210,17 @@ header picture img {
     width: 100%;
 }
 
+header picture source {
+    width: 100%;
+}
+
 /* Main Styles
 Going smoothly so far */
 
 main .container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
 }
 
@@ -325,7 +331,7 @@ main .container .pricing .card {
 .card .button:hover {
     background-color: #f00;
     color: #000;
-    transition: background-color: 0.5s ease;
+    transition: background-color 0.5s ease;
     transition: color 0.5s ease;
 }
 
@@ -464,4 +470,9 @@ footer a:hover {
     font-weight: 800;
     transition: color 0.5s ease;
     transition: font-weight 0.5s ease;
+}
+
+/* Media Query Time (this hurts my head the most) */
+
+@media (max-width:1024px) {
 }
