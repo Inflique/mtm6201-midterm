@@ -50,13 +50,14 @@ table {
 }
 
 /* Main styles
-Starting with this because doing it during the layout assembly is a headache*/
+Starting with this because doing it during the layout assembly is a headache */
 
 html {
     background-color: #000;
     font-family: 'Manrope', sans-serif;
     font-size: 16px;
     color: #fff;
+    line-height: 1.5;
 }
 
 h1, h2, h3 {
@@ -81,7 +82,8 @@ a {
 }
 
 .container {
-    max-width: 1440px;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 /* Navbar styles
@@ -94,12 +96,12 @@ nav .container {
     /* width 100% is the biggest clutch i ever seen */
     width: 100%;
     padding: 24px 0 50px 0;
-    /*padding for top and bottom makes for neat n adjustable spacing between page elements*/
+    /* padding for top and bottom makes for neat n adjustable spacing between
+    page elements */
     align-items: center;
-    margin: 0 auto;
 }
 
-nav .logo a {
+.logo a {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -108,7 +110,9 @@ nav .logo a {
     padding: 0 0 0 16px;
 }
 
-nav .logo img {
+/* rems are superior but i use px for gaps paddings and margins because i cant gauge
+rems in space correctly*/
+.logo img {
     width: 3rem;
 }
 
@@ -132,9 +136,28 @@ nav .signup a {
     margin: 0 0 0 24px;
 }
 
+.navbar a:hover {
+    color: #f00;
+    font-weight: 800;
+    transition: color 0.5s ease;
+    transition: font-weight 0.5s ease;   
+}
+
+nav .signup a:hover {
+    color: #f00;
+    transition: color 0.5s ease;
+}
+
 nav .signup .button {
     padding: 12px 48px;
-    border: 1px solid #fff;
+    border: 1px solid #f00;
+}
+
+nav .signup .button:hover {
+    color: #000;
+    background-color: #f00;
+    transition: color 0.5s ease;
+    transition: background-color 0.5s ease;
 }
 
 /* Header Styles */
@@ -143,8 +166,8 @@ header .container {
     display: flex;
     flex-direction: row;
     width: 100%;
-    margin: 0 auto;
     padding: 50px 0;
+    gap: 24px;
 }
 
 header .container div {
@@ -163,6 +186,21 @@ header .container div .button {
     margin: 24px 0;
 }
 
+header .container .button:hover {
+    animation: header-hover 0.33s forwards;
+}
+
+@keyframes header-hover {
+    0% {
+        transform: translateX(0);
+        color: #000;
+    }
+    100% {
+        transform: translateX(24px);
+        color: #fff;
+    }
+}
+
 header picture {
     width: 50%;
 }
@@ -178,7 +216,6 @@ main .container {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: 0 auto;
 }
 
 main .container .wide-card {
@@ -202,8 +239,8 @@ main .container .wide-card > div {
     gap: 24px;
 }
 
-/*This section took FOREVER to fix but luckily using rems instead of % height
-and using the > selector worked*/
+/* This section took FOREVER to fix but luckily using rems instead of % height
+and using the > selector worked */
 
 main .container .wide-card > div img {
     height: 3.5rem;
@@ -258,25 +295,173 @@ main .container .pricing {
     flex-direction: column;
     align-items: center;
     gap: 24px;
-    margin: 50px 0;
+    padding: 50px 0;
+    margin: 0 0 50px 0;
+    background-color: #111;
 }
 
 main .container .pricing > div {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    width: 66.67%;
+    width: 90%;
     gap: 48px;
+    margin: 48px 0;
 }
 
 main .container .pricing .card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 96px;
+    padding: 48px;
     border: 1px solid #fff;
     gap: 24px;
 }
 
+.card:hover {
+    background-color: #000;
+    transition: background-color 0.5s ease;
+}
+
+.card .button:hover {
+    background-color: #f00;
+    color: #000;
+    transition: background-color: 0.5s ease;
+    transition: color 0.5s ease;
+}
+
+main .container .pricing .card > img {
+    width: 3.5rem;
+}
+
+main .container .pricing .card ul {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 24px 0 64px 0;
+}
+
+main .container .pricing .card ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
 main .container .pricing .card .price {
     margin-top: auto;
+    /* I remember looking up a way to align certain items to the bottom when in a column
+    during my mtm6101 final and margin-top: auto saved me */
+}
+
+main .container .pricing .card .button {
+    border: 1px solid #f00;
+    padding: 12px 64px;
+}
+
+main .container .showcase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+main .container .showcase picture {
+    width: 100%;
+    margin: 50px 0;
+}
+
+main .container .showcase picture img {
+    width: 100%;
+}
+
+main .container .testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin: 50px 0;
+}
+
+main .container .testimonials > div {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+    margin: 24px 0 0 0;
+}
+
+main .container .testimonials > div .reviewcard {
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    gap: 24px;
+    width: 33.33%;
+}
+
+main .container .testimonials > div .reviewcard > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+main .container .testimonials > div .reviewcard > div img {
+    width: 1rem;
+}
+
+main .container .testimonials > div .reviewcard > div > .review-user {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0 48px 0 0;
+}
+
+main .container .testimonials > div .reviewcard > div > .review-user > .name {
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+main .container .testimonials > div .reviewcard > div > .rating {
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+/* Footer Styles
+Almost there! */
+
+footer {
+    background-color: #111;
+    padding: 50px;
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+footer .container > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+footer .container > .address {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+footer .container > .address > .copy {
+    margin-top: auto;
+}
+
+footer a:hover {
+    color: #f00;
+    font-weight: 800;
+    transition: color 0.5s ease;
+    transition: font-weight 0.5s ease;
 }

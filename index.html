@@ -17,17 +17,17 @@
         <!-- The first of 5000 div's -->
         <div class="container">
             <div class="logo">
-                <a href="#">
+                <a href="#home">
                     <img src="./images/logo.svg" alt="Inflique Media Logo">
                     <p>Inflique</p>
                 </a>
             </div>
             <div class="navbar">
                 <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#">Help</a></li>
                 </ul>
             </div>
@@ -41,7 +41,7 @@
     <header>
         <div class="container">
             <div>
-                <h1>Digital Media That Makes A Statement</h1>
+                <h1 id="home">Digital Media That Makes A Statement</h1>
                 <p>Create media that puts your business above the rest and develop your brand to new heights.</p>
                 <a href="#" class="button">Get Started</a>
             </div>
@@ -82,7 +82,7 @@
                 </picture>
                 <div>
                     <h2>All Your Media Needs In One Place</h2>
-                    <p>Feel free to explore whatever avenue suits your needs best</p>
+                    <p>A few services provided to develop your brand & marketing:</p>
                     <ul>
                         <li><img src="./images/CheckCircle.svg" alt="Check Icon"><p>Digital Graphics</p></li>
                         <li><img src="./images/CheckCircle.svg" alt="Check Icon"><p>Photography</p></li>
@@ -99,76 +99,96 @@
                         <img src="./images/Package.svg" alt="Package Icon">
                         <h3>Basic</h3>
                         <ul>
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
-                            <li>4</li>
+                            <li><img src="./images/CheckCircle.svg" alt="Check Icon"><p>Web Design & Development</p></li>
+                            <li><img src="./images/CheckCircle.svg" alt="Check Icon"><p>Graphic Design & Branding</p></li>
+                            <li><img src="./images/CheckCircle.svg" alt="Check Icon"><p>Photography</p></li>
+                            <li><img src="./images/CheckCircle.svg" alt="Check Icon"><p>Project Management</p></li>
                         </ul>
                         <h3 class="price">$50</h3>
-                        <div class="button">Select</div>
+                        <a href="#" class="button">Select</a>
                     </div>
                     <div class="card">
                         <img src="./images/Package.svg" alt="Package Icon">
                         <h3>Pro</h3>
                         <ul>
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
-                            <li>4</li>
-                            <li>5</li>
+                            <li><img src="./images/CheckCircle.svg" alt="Check Icon"><p>UX Design & CMS Website</p></li>
+                            <li><img src="./images/CheckCircle.svg" alt="Check Icon"><p>On-Location Photography</p></li>
+                            <li><img src="./images/CheckCircle.svg" alt="Check Icon"><p>Videography</p></li>
+                            <li><img src="./images/CheckCircle.svg" alt="Check Icon"><p>Digital Graphics Suite</p></li>
+                            <li><img src="./images/CheckCircle.svg" alt="Check Icon"><p>Managed Workflow</p></li>
                         </ul>
                         <h3 class="price">$70</h3>
-                        <div class="button">Select</div>
+                        <a href="#" class="button">Select</a>
                     </div>
                     <div class="card">
                         <img src="./images/Package.svg" alt="Package Icon">
                         <h3>Premium</h3>
                         <ul>
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
-                            <li>4</li>
-                            <li>5</li>
-                            <li>6</li>
+                            <li><img src="./images/CheckCircle.svg" alt="Check Icon"><p>Full-Scale Web Experience</p></li>
+                            <li><img src="./images/CheckCircle.svg" alt="Check Icon"><p>Motion Graphics</p></li>
+                            <li><img src="./images/CheckCircle.svg" alt="Check Icon"><p>Full Video Production</p></li>
+                            <li><img src="./images/CheckCircle.svg" alt="Check Icon"><p>Photography Library</p></li>
+                            <li><img src="./images/CheckCircle.svg" alt="Check Icon"><p>Brand System</p></li>
+                            <li><img src="./images/CheckCircle.svg" alt="Check Icon"><p>Project & Marketing Support</p></li>
                         </ul>
                         <h3 class="price">$100</h3>
-                        <div class="button">Select</div>
+                        <a href="#" class="button">Select</a>
                     </div>
                 </div>
             </div>
-            <div>
+            <div class="showcase">
                 <h2>A Large Variety of Styles</h2>
                 <p>Take your brand in any direction you see fit.</p>
+                <picture>
+                    <img src="./images/variety.png" alt="More media by Inflique">
+                </picture>
             </div>
             <div class="testimonials" id="testimonials">
                 <h2>Trusted by All Kinds of Businesses</h2>
                 <p>See the reviews of some of our most satisfied clients.</p>
-                <div class="reviewcard">
-                    <div>
+                <div>
+                    <div class="reviewcard">
                         <div>
-                            <p class="name">FirstName LastName</p>
-                            <p>Ottawa, Canada</p>
+                            <!-- I'm surprised at how many classes I had to add
+                             I know I can do pseudo-selectors but classes make it easier
+                             to track-->
+                            <div class="review-user">
+                                <p class="name">ByWard Botanicals</p>
+                                <p>Ottawa, Canada</p>
+                            </div>
+                            <div class="rating">
+                                <p>4.5</p>
+                                <img src="./images/Star.svg" alt="review star">
+                            </div>
                         </div>
+                        <p>“Wow... I am very happy with Inflique's services, it turned out to be more than my expectations and so far there have been no problems. Would easily recommend”.</p>
                     </div>
-                    <p></p>
-                </div>
-                <div class="reviewcard">
-                    <div>
+                    <div class="reviewcard">
                         <div>
-                            <p class="name">FirstName LastName</p>
-                            <p>Ottawa, Canada</p>
+                            <div class="review-user">
+                                <p class="name">Kestrel Audio</p>
+                                <p>Vancouver, Canada</p>
+                            </div>
+                            <div class="rating">
+                                <p>4.5</p>
+                                <img src="./images/Star.svg" alt="review star">
+                            </div>
                         </div>
+                        <p>“I like it because I like to make many changes and they were still met.”</p>
                     </div>
-                    <p></p>
-                </div>
-                <div class="reviewcard">
-                    <div>
+                    <div class="reviewcard">
                         <div>
-                            <p class="name">FirstName LastName</p>
-                            <p>Ottawa, Canada</p>
+                            <div class="review-user">
+                                <p class="name">Solstice Roasters</p>
+                                <p>Portland, United States</p>
+                            </div>
+                            <div class="rating">
+                                <p>4.5</p>
+                                <img src="./images/Star.svg" alt="review star">
+                            </div>
                         </div>
+                        <p>“This is a very unusual success for my business that currently requires a specific brand guidelines.”</p>
                     </div>
-                    <p></p>
                 </div>
             </div>
         </div>
@@ -177,7 +197,23 @@
     <footer>
         <div class="container">
             <div class="logo">
-
+                <a href="#">
+                    <img src="./images/logo.svg" alt="Inflique Media Logo">
+                    <p>Inflique</p>
+                </a>
+            </div>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+            <div class="address">
+                <p>1385 Woodroffe Ave</p>
+                <p>Ottawa, ON</p>
+                <p>K2G 1V8</p>
+                <p class="copy">&copy; Inflique, 2026</p>
             </div>
         </div>
     </footer>
