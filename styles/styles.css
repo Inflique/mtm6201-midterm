@@ -397,6 +397,10 @@ main .container .testimonials {
     margin: 50px 0;
 }
 
+main .container .testimonials h2 {
+    text-align: center;
+}
+
 main .container .testimonials > div {
     display: flex;
     flex-direction: row;
@@ -559,7 +563,16 @@ footer a:hover {
         width: 95%;
     }
     main .container .wide-card {
+        flex-direction: column;
         padding: 48px;
+        gap: 24px;
+    }
+    main .container .wide-card > div {
+        margin: 0 auto;
+    }
+    main .container .pricing > div {
+        display: flex;
+        flex-direction: column;
     }
     main .container .services {
         flex-direction: column;
@@ -573,5 +586,10 @@ footer a:hover {
     main .container .services div ul {
         align-items: center;
         margin: 48px 0;
+    }
+    
+    main .container .testimonials > div {
+        flex-direction: column;
+        align-items: center;
     }
 }
